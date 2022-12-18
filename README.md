@@ -2,6 +2,28 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Included Packages
+
+#### React.js
+
+Uses [React](https://reactjs.org/) frontend library to structure views and components.
+
+#### React Router
+
+Uses [React Router](https://reactrouter.com/en/main) to route between pages.
+
+#### MobX
+
+Uses [MobX](https://mobx.js.org/README.html#introduction) to easily adjust state.
+
+#### Typescript
+
+Uses [Typescript](https://www.typescriptlang.org/) to add typings to Javascript to catch errors more easily.
+
+#### Prettier
+
+Uses [Prettier](https://prettier.io/) to format code in a usual standard.
+
 ## Available Scripts
 
 In the project directory, you can run:

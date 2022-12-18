@@ -1,0 +1,9 @@
+.container {
+  height: 120px;
+  width: 120px;
+  background-color: black;
+}
+
+.championName {
+  color: white;
+}
