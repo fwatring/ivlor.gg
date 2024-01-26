@@ -1,9 +1,32 @@
-.container {
-  height: 120px;
-  width: 120px;
-  background-color: black;
+.championContainer {
+  background-size: contain;
+  border-radius: 4px;
+  height: 46px;
+  width: 46px;
+
+  background-color: grey;
 }
 
 .championName {
-  color: white;
+  position: relative;
+  top: 41px;
+  display: block;
+  width: 46px;
+  line-height: 14px;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--gray500);
+  margin-top: 2px;
+  height: 16px;
+}
+
+.listContainer {
+  width: 332px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 8px;
+  gap: 10px;
 }
