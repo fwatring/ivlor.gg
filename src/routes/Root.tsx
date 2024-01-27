@@ -1,11 +1,16 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable @typescript-eslint/ban-types */
-import React from 'react'
+import React, {useState} from 'react'
 import logo from '../assets/logo.svg'
 import './Root.css'
 import { makeObservable, observable, computed, action } from 'mobx'
 import { observer } from 'mobx-react'
 import { Link } from 'react-router-dom'
 
+function League(){
+  const [playerSearch, setPlayerSearch] = useState('')
+
+}
 @observer
 export default class App extends React.Component {
   constructor(props: {}) {
@@ -29,26 +34,17 @@ export default class App extends React.Component {
       this.title = 'Ivlor.gg'
     }
   }
-
+  
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/routes/Root.tsx</code> and save to reload.
-          </p>
-          <p>Title: {this.title}</p>
-          <p>TitleFormatted: {this.titleFormatted}</p>
-          <button type="button" onClick={this.changeTitle}>
-            CHANGE TITLE
-          </button>
+        <div className="container">
+          <h5> League of Legends Player Search</h5>
+          <input type="text"></input>
+          <button>Search for Player</button>
           <Link to={`champions`}>CHANGE PAGE</Link>
           {this.title === 'op.gg' && <p>Show this if title is op.gg</p>}
-          <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-            Learn React
-          </a>
-        </header>
+        </div>
       </div>
     )
   }

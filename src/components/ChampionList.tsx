@@ -94,6 +94,11 @@ const champions: Array<Champion> = [
   },
   {
     image:
+      'https://opgg-static.akamaized.net/meta/images/lol/14.2.1/champion/Briar.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1705466001567', // TODO
+    name: 'Briar',
+  },
+  {
+    image:
       'https://opgg-static.akamaized.net/meta/images/lol/champion/Caitlyn.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_92&v=1671465194390', // TODO
     name: 'Caitlyn',
   },
@@ -216,6 +221,11 @@ const champions: Array<Champion> = [
     image:
       'https://opgg-static.akamaized.net/meta/images/lol/champion/Heimerdinger.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_92&v=1671465194390', // TODO
     name: 'Heimerdinger',
+  },
+  {
+    image:
+      'https://opgg-static.akamaized.net/meta/images/lol/14.2.1/champion/Hwei.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1705466001567', // TODO
+    name: 'Hwei',
   },
   {
     image:
@@ -394,6 +404,11 @@ const champions: Array<Champion> = [
   },
   {
     image:
+      'https://opgg-static.akamaized.net/meta/images/lol/14.2.1/champion/Milio.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1705466001567', // TODO
+    name: 'Milio',
+  },
+  {
+    image:
       'https://opgg-static.akamaized.net/meta/images/lol/champion/MissFortune.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_92&v=1671465194390', // TODO
     name: 'Miss Fortune',
   },
@@ -406,6 +421,11 @@ const champions: Array<Champion> = [
     image:
       'https://opgg-static.akamaized.net/meta/images/lol/champion/Morgana.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_92&v=1671465194390', // TODO
     name: 'Morgana',
+  },
+  {
+    image:
+      'https://opgg-static.akamaized.net/meta/images/lol/14.2.1/champion/Naafiri.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1705466001567', // TODO
+    name: 'Naafiri',
   },
   {
     image:
