@@ -22,6 +22,7 @@ export default class ChampionPage extends React.Component {
   render() {
     return (
       <div>
+        <Link to={`/`}>Player Search Page</Link>
         <SearchBar searchText={this.searchText} handleChange={this.handleChange} />
         <ChampionList searchText={this.searchText} />
       </div>

@@ -1,10 +1,10 @@
 .championContainer {
-  background-size: contain;
   border-radius: 4px;
   height: 46px;
   width: 46px;
 
   background-color: grey;
+  overflow: hidden
 }
 
 .championName {
@@ -30,3 +30,10 @@
   padding-left: 8px;
   gap: 10px;
 }
+
+.championImage {
+    object-fit: contain;
+    height: 46px;
+    width: 46px;
+ }
+
