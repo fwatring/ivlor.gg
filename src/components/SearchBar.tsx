@@ -1,8 +1,9 @@
 import React from 'react'
-import './ChampionList.css'
+import './SearchBar.css'
 import { makeObservable, observable, computed, action } from 'mobx'
 import { observer } from 'mobx-react'
 import { Link } from 'react-router-dom'
+
 
 interface SearchBarProps {
   searchText: string
@@ -12,8 +13,10 @@ interface SearchBarProps {
 export default class SearchBar extends React.Component<SearchBarProps> {
   render() {
     return (
-      <div>
-        <input type="text" value={this.props.searchText} onChange={this.props.handleChange} />
+      <div className="searchbarContainer">
+        <img src="/assets/icon-search-dark.svg" className="iconContainer"></img>
+
+        <input value={this.props.searchText} onChange={this.props.handleChange} className="textInputContainer" placeholder="Search a Champion"/>
       </div>
     )
   }

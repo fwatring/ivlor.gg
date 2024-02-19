@@ -7,7 +7,7 @@ import { observer } from 'mobx-react'
 interface Champion {
   version: string
   id: string
-  key: number
+  key: string
   name: string
   title: string
   blurb: string
@@ -53,6 +53,8 @@ interface Champion {
 
 interface ChampionListProps {
   searchText: string
+  freeChampionIds: number[]
+  filter: string
 }
 
 @observer
@@ -71,6 +73,7 @@ export default class ChampionList extends React.Component<ChampionListProps> {
     axios
       .get(APICallString).then((response) => {
       this.champions = Object.values(response.data.data)
+      console.log(response.data.data)
       
     }).catch(function (Error) {
       
@@ -83,15 +86,24 @@ export default class ChampionList extends React.Component<ChampionListProps> {
 
   render() {
     console.log(this.champions)
+    console.log(this.props.freeChampionIds)
     return (
       <div className="listContainer">
         {this.champions
           .filter((x,index,array) => {
             return x.name.toLowerCase().includes(this.props.searchText.toLowerCase())
           })
+          .filter((x,index,array) => {
+            return this.props.filter === 'rot'?this.props.freeChampionIds.includes(parseInt(x.key)): true
+          })
+          .filter((x,index,array) => {
+            return this.props.filter === 'jng'?x.tags.includes("Fighter"): true
+          })
           .map((x,index,array) => {
             return <ChampionListItem key={x.name} champion={x} />
-      })}
+      })
+      }
+
       </div>
     )
   }
@@ -110,18 +122,16 @@ export class ChampionListItem extends React.Component<ChampionListItemProps> {
 
   render() {
     return (
-      <div
-        className="championContainer"
-        style={{
-          
-        }}
-      >
-        {/* <p className="championName">{this.props.champion.name}</p> */}
-        <img
-          className="championImage"
-          src={`https://ddragon.leagueoflegends.com/cdn/14.3.1/img/champion/${this.props.champion.image.full}`}
-        ></img>
+      <div>
+        <div className="championContainer">
+          <img
+            className="championImage"
+            src={`https://ddragon.leagueoflegends.com/cdn/14.3.1/img/champion/${this.props.champion.image.full}`}
+          />
+        </div>
+        <div className="championName">{this.props.champion.name}</div>
       </div>
+
     )
   }
 }
